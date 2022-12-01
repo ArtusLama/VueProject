@@ -1,5 +1,7 @@
 <template>
-  <h1>WELCOME</h1>
+  <h1>Die besten Bücher</h1>
+  
+  
 </template>
 
 <script>
