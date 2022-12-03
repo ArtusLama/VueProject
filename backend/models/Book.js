@@ -13,6 +13,10 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: Number
     },
+    cover: {
+        required: true,
+        type: String
+    },
     length: {
         required: true,
         type: Number
@@ -20,6 +24,10 @@ const dataSchema = new mongoose.Schema({
     stars: {
         required: true,
         type: Number
+    },
+    tags: {
+        required: true,
+        type: Array
     }
 });
 
