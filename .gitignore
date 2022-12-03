@@ -1,3 +1,4 @@
 
 db-pwd.txt
 backend/.env
+!vue\dist
