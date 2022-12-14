@@ -13,7 +13,13 @@
         </li>
       </ul>
 
-      <h4>{{ stars }} stars</h4>
+      <h4>
+        <span v-for="(star) in stars" :key=star>
+          <span v-if="(star % 2 == 0)" class="star">⭐️</span>
+          <span v-else-if="(star == stars)" class="star half-star">⭐️</span>
+          
+        </span>
+      </h4>
     </div>
 
     
@@ -35,17 +41,47 @@ export default {
 
 <style>
 
+  .book_cover {
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+  
+
+  .book_info h4 {
+
+    position: absolute;
+    top: 0;
+    left: 10px;
+
+  }
+
+  .star {
+    position: relative;
+  }
+
+  .half-star::after {
+    content: "";
+    background: white;
+    position: absolute;
+    mix-blend-mode: color;
+    
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+  }
+
   .bookPreview {
 
     width: 100%;
     height: 100%;
     background-color: rgb(163, 241, 195);
 
-    display: flex;
     position: relative;
-
-    justify-content: center;
-    align-items: center;
 
   }
 
